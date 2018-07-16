@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>货物展示</title>
+    <script>
+        $(function(){
+            $('#btn').click(function () {
+                var obj = $(this);
+                var has_click = obj.attr('has_click');
+                if(has_click == '1'){
+                    return;
+                }
+                obj.attr('has_click','1');
+                var url ='127.0.0.1:8000';
+                var content = 'hellomerry';
+                $.ajax(
+                    {
+                        type:'post',
+                        url:url,
+                        dataType:'json',
+                        data:{content:content},
+
+                    }
+                )
+
+            })
+            }
+
+        )
+    </script>
+</head>
+<body>
+<form action="goodlist" method="POST">
+    {% csrf_token %}
+    <h2>fsocity</h2>
+    <img src="{{ goods.gpicture }}" alt="{{ goods.gname }}"><br>
+    <h3>{{ goods.gname }}</h3><h4>{{ goods.gclassify }}</h4><br>
+    <h4>{{ goods.gprice }}</h4>
+</form>
+    <form action='goodlist' method="POST">
+    {% csrf_token %}
+
+
+    <hr>
+
+
+    <lable>{{ loginer }}你的选购数量为:</lable>
+    <input type="text" name="numberToBuy">
+    <a href="{% url 'home' '1' %}"><input type="submit" value="确定(跳转首页)"> </a>
+
+
+
+    <textarea name="comments"  cols="300" rows="10">
+        {% for i in comment %}
+            {{ i.contemt }}.......from{{ i.name }}
+        {% endfor %}
+
+    </textarea>
+
+    <h3>添加评论</h3>
+    <lable>姓名:</lable>
+    <input type="text" name="name"><br>
+    <lable>内容:</lable>
+    <textarea name="comments" cols="30" rows="5" placeholder="请输入评论"></textarea><br>
+    <input type="submit" id=btn value="提交">
+</form>
+
+</body>
+</html>

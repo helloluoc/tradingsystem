@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+<form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+        <lable>用户名:</lable>
+        <input type="text" name="username" placeholder="请输入用户名"><br>
+    </div>
+
+    <div>
+        <lable>密码:</lable>
+        <input type="password" name="password" placeholder="请输入密码"><br>
+    </div>
+
+    <div>
+        <img src="/getvcode"><br>
+        <input type="text" placeholder="请输入验证码" name="vcode">
+    </div>
+
+    <div>
+        <lable>用户上传头像:</lable>
+        <input type="file" name="icon"><br>
+    </div>
+
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

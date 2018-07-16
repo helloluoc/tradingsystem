@@ -11,3 +11,9 @@ Django制作的一个交易平台
 
 
 ![image](https://github.com/helloluoc/tradingsystem/blob/master/photo01.jpg)
+
+
+20180716：1.前端页面未完成；
+          2.多级评论未完成；
+          3.后台管理页面未完成；
+          4.restful

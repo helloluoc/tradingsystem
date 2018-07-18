@@ -14,9 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 import social_django
+
 from django.conf.urls import url
 from django.contrib import admin
 
+from extra_apps import xadmin
 from tradingApp import views
 
 urlpatterns = [
@@ -26,6 +28,7 @@ urlpatterns = [
     url(r'home/(\d+)/',views.home,name='home'),
     url(r'^getvcode',views.getvcode,name='fuck'),
     url(r'^goodlist/(\d+)/',views.readGoods,name='goodlist'),
+    url(r"^fuck",xadmin.site.urls),
     #url(r'^test/',views.test,name='test'),
     #url('',social_django.urls, namespace='social'),
 ]

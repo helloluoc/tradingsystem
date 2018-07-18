@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+sys.path.insert(0,os.path.join(BASE_DIR,"extra_apps"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -40,6 +41,9 @@ INSTALLED_APPS = [
 
     'tradingApp',
     'social_django',
+
+    'xadmin',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -105,16 +109,16 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.weibo.WeiboOAuth2',
-    'social_core.backends.qq.QQOAuth2',
-    'social_core.backends.weixin.WeixinOAuth',
+    #'social_core.backends.weibo.WeiboOAuth2',
+    #'social_core.backends.qq.QQOAuth2',
+    #'social_core.backends.weixin.WeixinOAuth',
     'django.contrib.auth.backends.ModelBackend',
 )
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hans'
 
 TIME_ZONE = 'UTC'
 

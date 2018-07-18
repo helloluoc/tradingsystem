@@ -65,74 +65,85 @@ def login(request):
 
 #首页展示,包含分页数据
 def home(request, pagenum=1):
-    goodAll = Good.objects.all()
-    #构建分页器对象,每页展示2个对象
-    paginator = Paginator(goodAll,5)
-    #获取第n页的页面对象
-    page = paginator.page(pagenum)
-    data = {
-        #当前页的对象列表
-        'page': page,
-        #分页页码范围
-        'pagerange': paginator.page_range,
-        #当前页的页码
-        'currentpage':page.number,
-    }
-    return render(request,'home.html',context=data)
+    loginUser = request.session.get("username")
+    #如果登录成功则展示首页,否则跳回登录界面
+    if loginUser:
+        print(loginUser)
+        goodAll = Good.objects.all()
+        #构建分页器对象,每页展示2个对象
+        paginator = Paginator(goodAll,5)
+        #获取第n页的页面对象
+        page = paginator.page(pagenum)
+        data = {
+            #当前页的对象列表
+            'page': page,
+            #分页页码范围
+            'pagerange': paginator.page_range,
+            #当前页的页码
+            'currentpage':page.number,
+        }
+        return render(request,'home.html',context=data)
+    else:
+        print("*******************fuck***********************")
+        return redirect("login")
 
 #商品展示和购买页面
 def readGoods(request,goodId):
-    if request.method == 'GET':
-        goodShow = Good.objects.get(id=goodId)
-        comments = comment.objects.filter(guser_id=goodId).all()
-        loginer = request.session.get('username')
-        for i in comments:
-            print(i.name)
-        Goodlist = {
-            'goods': goodShow,
-            'comment': comments,
-            'loginer': loginer,
-        }
-        return render(request, 'readgoods.html', context=Goodlist)
-    else:
-        #加入购物车
-        buyer = request.session.get('username')
-        print('顾客',buyer)
-        buyerId = User.objects.get(uname=buyer).id
-        goodShow = Good.objects.get(id=goodId).id
-        num = request.POST.get('numberToBuy', 5)
-        num = int(num)
-        print("顾客ID:",buyerId,"货物ID:",goodShow)
-        print('购买数量:')
-        print(type(num))
+    if request.session.get["username"]:
+        if request.method == 'GET':
+            goodShow = Good.objects.get(id=goodId)
+            comments = comment.objects.filter(guser_id=goodId).all()
+            loginer = request.session.get('username')
+            for i in comments:
+                print(i.name)
+            Goodlist = {
+                'goods': goodShow,
+                'comment': comments,
+                'loginer': loginer,
+            }
+            return render(request, 'readgoods.html', context=Goodlist)
+        else:
+            #加入购物车
+            buyer = request.session.get('username')
+            print('顾客',buyer)
+            buyerId = User.objects.get(uname=buyer).id
+            goodShow = Good.objects.get(id=goodId).id
+            num = request.POST.get('numberToBuy', 5)
+            num = int(num)
+            print("顾客ID:",buyerId,"货物ID:",goodShow)
+            print('购买数量:')
+            print(type(num))
 
-        q = (Q(useId_id =buyerId ) & Q(goodId_id=goodShow))
-        print('useid:',buyerId, "goodid:", goodShow)
-        try:
-            buyer = cart.objects.get(Q(useId_id =buyerId ) & Q(goodId_id=goodShow))
-            formerNum = buyer.gnumber
-            buyer.gnumber = formerNum + num
-            buyer.save()
-        except:
-            print(buyerId,'-----',goodShow)
-            car = cart()
-            car.useId_id = buyerId
-            car.goodId_id = goodShow
-            car.gnumber = num
-            car.save()
-        #评论
-        comments = comment()
-        comments.name = request.POST.get('name')
-        comments.contemt = request.POST.get('comments')
-        comments.guser_id = goodId
-        comments.save()
-        comments = comment.objects.filter(guser_id=goodId)
-        Goodlist = {
-            'goods': goodShow,
-            'comment':comments,
-            'username': request.session['username'],
-        }
-        return render(request,'readgoods.html',context=Goodlist)
+            q = (Q(useId_id =buyerId ) & Q(goodId_id=goodShow))
+            print('useid:',buyerId, "goodid:", goodShow)
+            try:
+                buyer = cart.objects.get(Q(useId_id =buyerId ) & Q(goodId_id=goodShow))
+                formerNum = buyer.gnumber
+                buyer.gnumber = formerNum + num
+                buyer.save()
+            except:
+                print(buyerId,'-----',goodShow)
+                car = cart()
+                car.useId_id = buyerId
+                car.goodId_id = goodShow
+                car.gnumber = num
+                car.save()
+            #评论
+            comments = comment()
+            comments.name = request.POST.get('name')
+            comments.contemt = request.POST.get('comments')
+            comments.guser_id = goodId
+            comments.save()
+            comments = comment.objects.filter(guser_id=goodId)
+            Goodlist = {
+                'goods': goodShow,
+                'comment':comments,
+                'username': request.session['username'],
+            }
+            return render(request,'readgoods.html',context=Goodlist)
+    else:
+        print("*******************fuck***********************")
+        return redirect("login")
 
 
 

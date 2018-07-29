@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^getvcode',views.getvcode,name='fuck'),
     url(r'^goodlist/(\d+)/',views.readGoods,name='goodlist'),
     url(r"^fuck",xadmin.site.urls),
+    url(r"^bcar",views.buyercar,name="buyercar")
     #url(r'^test/',views.test,name='test'),
     #url('',social_django.urls, namespace='social'),
 ]

@@ -34,3 +34,4 @@ class cart(models.Model):
     gnumber = models.IntegerField(default=0)
 
 
+

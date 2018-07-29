@@ -16,64 +16,70 @@
     <table id="10" parent="2" name="django_content_type"/>
     <table id="11" parent="2" name="django_migrations"/>
     <table id="12" parent="2" name="django_session"/>
-    <table id="13" parent="2" name="social_auth_association"/>
-    <table id="14" parent="2" name="social_auth_code"/>
-    <table id="15" parent="2" name="social_auth_nonce"/>
-    <table id="16" parent="2" name="social_auth_partial"/>
-    <table id="17" parent="2" name="social_auth_usersocialauth"/>
-    <table id="18" parent="2" name="sqlite_sequence"/>
-    <table id="19" parent="2" name="tradingApp_buyercard"/>
-    <table id="20" parent="2" name="tradingApp_buyercard_cbuyerGoods"/>
-    <table id="21" parent="2" name="tradingApp_cart"/>
-    <table id="22" parent="2" name="tradingApp_comment"/>
-    <table id="23" parent="2" name="tradingApp_good"/>
-    <table id="24" parent="2" name="tradingApp_user"/>
-    <column id="25" parent="3" name="id">
+    <table id="13" parent="2" name="reversion_revision"/>
+    <table id="14" parent="2" name="reversion_version"/>
+    <table id="15" parent="2" name="social_auth_association"/>
+    <table id="16" parent="2" name="social_auth_code"/>
+    <table id="17" parent="2" name="social_auth_nonce"/>
+    <table id="18" parent="2" name="social_auth_partial"/>
+    <table id="19" parent="2" name="social_auth_usersocialauth"/>
+    <table id="20" parent="2" name="sqlite_sequence"/>
+    <table id="21" parent="2" name="tradingApp_buyercard"/>
+    <table id="22" parent="2" name="tradingApp_buyercard_cbuyerGoods"/>
+    <table id="23" parent="2" name="tradingApp_cart"/>
+    <table id="24" parent="2" name="tradingApp_comment"/>
+    <table id="25" parent="2" name="tradingApp_good"/>
+    <table id="26" parent="2" name="tradingApp_user"/>
+    <table id="27" parent="2" name="xadmin_bookmark"/>
+    <table id="28" parent="2" name="xadmin_log"/>
+    <table id="29" parent="2" name="xadmin_usersettings"/>
+    <table id="30" parent="2" name="xadmin_userwidget"/>
+    <column id="31" parent="3" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="26" parent="3" name="name">
+    <column id="32" parent="3" name="name">
       <Position>2</Position>
       <DataType>VARCHAR(80)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="27" parent="3" name="sqlite_autoindex_auth_group_1">
+    <index id="33" parent="3" name="sqlite_autoindex_auth_group_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="28" parent="3">
+    <key id="34" parent="3">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="29" parent="4" name="id">
+    <column id="35" parent="4" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="30" parent="4" name="group_id">
+    <column id="36" parent="4" name="group_id">
       <Position>2</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="4" name="permission_id">
+    <column id="37" parent="4" name="permission_id">
       <Position>3</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="32" parent="4" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+    <index id="38" parent="4" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
       <ColNames>group_id
 permission_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="33" parent="4">
+    <key id="39" parent="4">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="34" parent="4" name="#FAKE_auth_group_permissions_2">
+    <foreign-key id="40" parent="4" name="#FAKE_auth_group_permissions_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>group_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -83,7 +89,7 @@ permission_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="35" parent="4" name="#FAKE_auth_group_permissions_1">
+    <foreign-key id="41" parent="4" name="#FAKE_auth_group_permissions_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>permission_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -93,37 +99,37 @@ permission_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="36" parent="5" name="id">
+    <column id="42" parent="5" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="37" parent="5" name="content_type_id">
+    <column id="43" parent="5" name="content_type_id">
       <Position>2</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="5" name="codename">
+    <column id="44" parent="5" name="codename">
       <Position>3</Position>
       <DataType>VARCHAR(100)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="39" parent="5" name="name">
+    <column id="45" parent="5" name="name">
       <Position>4</Position>
       <DataType>VARCHAR(255)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="40" parent="5" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+    <index id="46" parent="5" name="auth_permission_content_type_id_codename_01ab375a_uniq">
       <ColNames>content_type_id
 codename</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="5">
+    <key id="47" parent="5">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="42" parent="5" name="#FAKE_auth_permission_1">
+    <foreign-key id="48" parent="5" name="#FAKE_auth_permission_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>content_type_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -133,96 +139,96 @@ codename</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="43" parent="6" name="id">
+    <column id="49" parent="6" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="44" parent="6" name="password">
+    <column id="50" parent="6" name="password">
       <Position>2</Position>
       <DataType>VARCHAR(128)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="6" name="last_login">
+    <column id="51" parent="6" name="last_login">
       <Position>3</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
     </column>
-    <column id="46" parent="6" name="is_superuser">
+    <column id="52" parent="6" name="is_superuser">
       <Position>4</Position>
       <DataType>BOOL(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="6" name="first_name">
+    <column id="53" parent="6" name="first_name">
       <Position>5</Position>
       <DataType>VARCHAR(30)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="6" name="last_name">
+    <column id="54" parent="6" name="last_name">
       <Position>6</Position>
       <DataType>VARCHAR(30)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="6" name="email">
+    <column id="55" parent="6" name="email">
       <Position>7</Position>
       <DataType>VARCHAR(254)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="50" parent="6" name="is_staff">
+    <column id="56" parent="6" name="is_staff">
       <Position>8</Position>
       <DataType>BOOL(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="6" name="is_active">
+    <column id="57" parent="6" name="is_active">
       <Position>9</Position>
       <DataType>BOOL(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="6" name="date_joined">
+    <column id="58" parent="6" name="date_joined">
       <Position>10</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="6" name="username">
+    <column id="59" parent="6" name="username">
       <Position>11</Position>
       <DataType>VARCHAR(150)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="54" parent="6" name="sqlite_autoindex_auth_user_1">
+    <index id="60" parent="6" name="sqlite_autoindex_auth_user_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="55" parent="6">
+    <key id="61" parent="6">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="56" parent="7" name="id">
+    <column id="62" parent="7" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="57" parent="7" name="user_id">
+    <column id="63" parent="7" name="user_id">
       <Position>2</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="58" parent="7" name="group_id">
+    <column id="64" parent="7" name="group_id">
       <Position>3</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="59" parent="7" name="auth_user_groups_user_id_group_id_94350c0c_uniq">
+    <index id="65" parent="7" name="auth_user_groups_user_id_group_id_94350c0c_uniq">
       <ColNames>user_id
 group_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="60" parent="7">
+    <key id="66" parent="7">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="61" parent="7" name="#FAKE_auth_user_groups_2">
+    <foreign-key id="67" parent="7" name="#FAKE_auth_user_groups_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -232,7 +238,7 @@ group_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="62" parent="7" name="#FAKE_auth_user_groups_1">
+    <foreign-key id="68" parent="7" name="#FAKE_auth_user_groups_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>group_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -242,32 +248,32 @@ group_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="63" parent="8" name="id">
+    <column id="69" parent="8" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="64" parent="8" name="user_id">
+    <column id="70" parent="8" name="user_id">
       <Position>2</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="65" parent="8" name="permission_id">
+    <column id="71" parent="8" name="permission_id">
       <Position>3</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="66" parent="8" name="auth_user_user_permissions_user_id_permission_id_14a6b632_uniq">
+    <index id="72" parent="8" name="auth_user_user_permissions_user_id_permission_id_14a6b632_uniq">
       <ColNames>user_id
 permission_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="67" parent="8">
+    <key id="73" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="68" parent="8" name="#FAKE_auth_user_user_permissions_2">
+    <foreign-key id="74" parent="8" name="#FAKE_auth_user_user_permissions_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -277,7 +283,7 @@ permission_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="69" parent="8" name="#FAKE_auth_user_user_permissions_1">
+    <foreign-key id="75" parent="8" name="#FAKE_auth_user_user_permissions_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>permission_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -287,50 +293,50 @@ permission_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="70" parent="9" name="id">
+    <column id="76" parent="9" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="71" parent="9" name="object_id">
+    <column id="77" parent="9" name="object_id">
       <Position>2</Position>
       <DataType>TEXT(0,-1)|12</DataType>
     </column>
-    <column id="72" parent="9" name="object_repr">
+    <column id="78" parent="9" name="object_repr">
       <Position>3</Position>
       <DataType>VARCHAR(200)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="73" parent="9" name="action_flag">
+    <column id="79" parent="9" name="action_flag">
       <Position>4</Position>
       <DataType>SMALLINT UNSIGNED(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="74" parent="9" name="change_message">
+    <column id="80" parent="9" name="change_message">
       <Position>5</Position>
       <DataType>TEXT(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="75" parent="9" name="content_type_id">
+    <column id="81" parent="9" name="content_type_id">
       <Position>6</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
     </column>
-    <column id="76" parent="9" name="user_id">
+    <column id="82" parent="9" name="user_id">
       <Position>7</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="77" parent="9" name="action_time">
+    <column id="83" parent="9" name="action_time">
       <Position>8</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="78" parent="9">
+    <key id="84" parent="9">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="79" parent="9" name="#FAKE_django_admin_log_2">
+    <foreign-key id="85" parent="9" name="#FAKE_django_admin_log_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>content_type_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -340,7 +346,7 @@ permission_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="80" parent="9" name="#FAKE_django_admin_log_1">
+    <foreign-key id="86" parent="9" name="#FAKE_django_admin_log_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -350,277 +356,387 @@ permission_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="81" parent="10" name="id">
+    <column id="87" parent="10" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="82" parent="10" name="app_label">
+    <column id="88" parent="10" name="app_label">
       <Position>2</Position>
       <DataType>VARCHAR(100)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="83" parent="10" name="model">
+    <column id="89" parent="10" name="model">
       <Position>3</Position>
       <DataType>VARCHAR(100)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="84" parent="10" name="django_content_type_app_label_model_76bd3d3b_uniq">
+    <index id="90" parent="10" name="django_content_type_app_label_model_76bd3d3b_uniq">
       <ColNames>app_label
 model</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="85" parent="10">
+    <key id="91" parent="10">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="86" parent="11" name="id">
+    <column id="92" parent="11" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="87" parent="11" name="app">
+    <column id="93" parent="11" name="app">
       <Position>2</Position>
       <DataType>VARCHAR(255)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="88" parent="11" name="name">
+    <column id="94" parent="11" name="name">
       <Position>3</Position>
       <DataType>VARCHAR(255)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="89" parent="11" name="applied">
+    <column id="95" parent="11" name="applied">
       <Position>4</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="90" parent="11">
+    <key id="96" parent="11">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="91" parent="12" name="session_key">
+    <column id="97" parent="12" name="session_key">
       <Position>1</Position>
       <DataType>VARCHAR(40)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="92" parent="12" name="session_data">
+    <column id="98" parent="12" name="session_data">
       <Position>2</Position>
       <DataType>TEXT(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="93" parent="12" name="expire_date">
+    <column id="99" parent="12" name="expire_date">
       <Position>3</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="94" parent="12" name="django_session_expire_date_a5c62663">
+    <index id="100" parent="12" name="django_session_expire_date_a5c62663">
       <ColNames>expire_date</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="95" parent="12">
+    <key id="101" parent="12">
       <ColNames>session_key</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="96" parent="13" name="id">
+    <column id="102" parent="13" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="97" parent="13" name="server_url">
+    <column id="103" parent="13" name="date_created">
       <Position>2</Position>
-      <DataType>VARCHAR(255)(0,-1)|12</DataType>
+      <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="98" parent="13" name="handle">
+    <column id="104" parent="13" name="comment">
+      <Position>3</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="13" name="user_id">
+      <Position>4</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <index id="106" parent="13" name="reversion_revision_date_created_96f7c20c">
+      <ColNames>date_created</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="107" parent="13">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="108" parent="13" name="#FAKE_reversion_revision_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <column id="109" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="110" parent="14" name="object_id">
+      <Position>2</Position>
+      <DataType>VARCHAR(191)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="14" name="format">
       <Position>3</Position>
       <DataType>VARCHAR(255)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="99" parent="13" name="secret">
+    <column id="112" parent="14" name="serialized_data">
       <Position>4</Position>
-      <DataType>VARCHAR(255)(0,-1)|12</DataType>
+      <DataType>TEXT(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="100" parent="13" name="issued">
+    <column id="113" parent="14" name="object_repr">
       <Position>5</Position>
-      <DataType>INTEGER(0,-1)|4</DataType>
+      <DataType>TEXT(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="101" parent="13" name="lifetime">
+    <column id="114" parent="14" name="content_type_id">
       <Position>6</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="102" parent="13" name="assoc_type">
+    <column id="115" parent="14" name="revision_id">
       <Position>7</Position>
-      <DataType>VARCHAR(64)(0,-1)|12</DataType>
+      <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="103" parent="13" name="social_auth_association_server_url_handle_078befa2_uniq">
-      <ColNames>server_url
-handle</ColNames>
+    <column id="116" parent="14" name="db">
+      <Position>8</Position>
+      <DataType>VARCHAR(191)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="117" parent="14" name="reversion_version_db_content_type_id_object_id_revision_id_b2c54f65_uniq">
+      <ColNames>db
+content_type_id
+object_id
+revision_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="104" parent="13">
+    <key id="118" parent="14">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="105" parent="14" name="id">
+    <foreign-key id="119" parent="14" name="#FAKE_reversion_version_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>content_type_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>django_content_type</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <foreign-key id="120" parent="14" name="#FAKE_reversion_version_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>revision_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>reversion_revision</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <column id="121" parent="15" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="106" parent="14" name="email">
-      <Position>2</Position>
-      <DataType>VARCHAR(254)(0,-1)|12</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="107" parent="14" name="code">
-      <Position>3</Position>
-      <DataType>VARCHAR(32)(0,-1)|12</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="108" parent="14" name="verified">
-      <Position>4</Position>
-      <DataType>BOOL(0,-1)|4</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="109" parent="14" name="timestamp">
-      <Position>5</Position>
-      <DataType>DATETIME(0,-1)|12</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="110" parent="14" name="social_auth_code_email_code_801b2d02_uniq">
-      <ColNames>email
-code</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="111" parent="14" name="social_auth_code_code_a2393167">
-      <ColNames>code</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="112" parent="14" name="social_auth_code_timestamp_176b341f">
-      <ColNames>timestamp</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="113" parent="14">
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="114" parent="15" name="id">
-      <Position>1</Position>
-      <DataType>INTEGER(0,-1)|4</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="115" parent="15" name="server_url">
+    <column id="122" parent="15" name="server_url">
       <Position>2</Position>
       <DataType>VARCHAR(255)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="116" parent="15" name="timestamp">
+    <column id="123" parent="15" name="handle">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="15" name="secret">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="125" parent="15" name="issued">
+      <Position>5</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="126" parent="15" name="lifetime">
+      <Position>6</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="15" name="assoc_type">
+      <Position>7</Position>
+      <DataType>VARCHAR(64)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="128" parent="15" name="social_auth_association_server_url_handle_078befa2_uniq">
+      <ColNames>server_url
+handle</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="129" parent="15">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="130" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="131" parent="16" name="email">
+      <Position>2</Position>
+      <DataType>VARCHAR(254)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="132" parent="16" name="code">
+      <Position>3</Position>
+      <DataType>VARCHAR(32)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="133" parent="16" name="verified">
+      <Position>4</Position>
+      <DataType>BOOL(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="134" parent="16" name="timestamp">
+      <Position>5</Position>
+      <DataType>DATETIME(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="135" parent="16" name="social_auth_code_email_code_801b2d02_uniq">
+      <ColNames>email
+code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="136" parent="16" name="social_auth_code_code_a2393167">
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="137" parent="16" name="social_auth_code_timestamp_176b341f">
+      <ColNames>timestamp</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="138" parent="16">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="139" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="140" parent="17" name="server_url">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="141" parent="17" name="timestamp">
       <Position>3</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="117" parent="15" name="salt">
+    <column id="142" parent="17" name="salt">
       <Position>4</Position>
       <DataType>VARCHAR(65)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="118" parent="15" name="social_auth_nonce_server_url_timestamp_salt_f6284463_uniq">
+    <index id="143" parent="17" name="social_auth_nonce_server_url_timestamp_salt_f6284463_uniq">
       <ColNames>server_url
 timestamp
 salt</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="119" parent="15">
+    <key id="144" parent="17">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="120" parent="16" name="id">
+    <column id="145" parent="18" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="121" parent="16" name="token">
+    <column id="146" parent="18" name="token">
       <Position>2</Position>
       <DataType>VARCHAR(32)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="122" parent="16" name="next_step">
+    <column id="147" parent="18" name="next_step">
       <Position>3</Position>
       <DataType>SMALLINT UNSIGNED(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="123" parent="16" name="backend">
+    <column id="148" parent="18" name="backend">
       <Position>4</Position>
       <DataType>VARCHAR(32)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="124" parent="16" name="data">
+    <column id="149" parent="18" name="data">
       <Position>5</Position>
       <DataType>TEXT(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="125" parent="16" name="timestamp">
+    <column id="150" parent="18" name="timestamp">
       <Position>6</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="126" parent="16" name="social_auth_partial_token_3017fea3">
+    <index id="151" parent="18" name="social_auth_partial_token_3017fea3">
       <ColNames>token</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="127" parent="16" name="social_auth_partial_timestamp_50f2119f">
+    <index id="152" parent="18" name="social_auth_partial_timestamp_50f2119f">
       <ColNames>timestamp</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="128" parent="16">
+    <key id="153" parent="18">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="129" parent="17" name="id">
+    <column id="154" parent="19" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="130" parent="17" name="provider">
+    <column id="155" parent="19" name="provider">
       <Position>2</Position>
       <DataType>VARCHAR(32)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="131" parent="17" name="uid">
+    <column id="156" parent="19" name="uid">
       <Position>3</Position>
       <DataType>VARCHAR(255)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="132" parent="17" name="user_id">
+    <column id="157" parent="19" name="user_id">
       <Position>4</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="133" parent="17" name="extra_data">
+    <column id="158" parent="19" name="extra_data">
       <Position>5</Position>
       <DataType>TEXT(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="134" parent="17" name="social_auth_usersocialauth_provider_uid_e6b5e668_uniq">
+    <index id="159" parent="19" name="social_auth_usersocialauth_provider_uid_e6b5e668_uniq">
       <ColNames>provider
 uid</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="135" parent="17">
+    <key id="160" parent="19">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="136" parent="17" name="#FAKE_social_auth_usersocialauth_1">
+    <foreign-key id="161" parent="19" name="#FAKE_social_auth_usersocialauth_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -630,34 +746,39 @@ uid</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="137" parent="18" name="name">
+    <column id="162" parent="20" name="name">
       <Position>1</Position>
       <DataType>(0,-1)|12</DataType>
     </column>
-    <column id="138" parent="18" name="seq">
+    <column id="163" parent="20" name="seq">
       <Position>2</Position>
       <DataType>(0,-1)|12</DataType>
     </column>
-    <column id="139" parent="19" name="id">
+    <column id="164" parent="21" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="140" parent="19" name="cprice">
+    <column id="165" parent="21" name="cprice">
       <Position>2</Position>
       <DataType>REAL(0,-1)|6</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="141" parent="19" name="cbuyer_id">
+    <column id="166" parent="21" name="cbuyer_id">
       <Position>3</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
     </column>
-    <key id="142" parent="19">
+    <column id="167" parent="21" name="cremainder">
+      <Position>4</Position>
+      <DataType>REAL(0,-1)|6</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="168" parent="21">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="143" parent="19" name="#FAKE_tradingApp_buyercard_1">
+    <foreign-key id="169" parent="21" name="#FAKE_tradingApp_buyercard_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>cbuyer_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -667,32 +788,32 @@ uid</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="144" parent="20" name="id">
+    <column id="170" parent="22" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="145" parent="20" name="buyercard_id">
+    <column id="171" parent="22" name="buyercard_id">
       <Position>2</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="146" parent="20" name="good_id">
+    <column id="172" parent="22" name="good_id">
       <Position>3</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="147" parent="20" name="tradingApp_buyercard_cbuyerGoods_buyercard_id_good_id_bea46db2_uniq">
+    <index id="173" parent="22" name="tradingApp_buyercard_cbuyerGoods_buyercard_id_good_id_bea46db2_uniq">
       <ColNames>buyercard_id
 good_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="148" parent="20">
+    <key id="174" parent="22">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="149" parent="20" name="#FAKE_tradingApp_buyercard_cbuyerGoods_2">
+    <foreign-key id="175" parent="22" name="#FAKE_tradingApp_buyercard_cbuyerGoods_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>buyercard_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -702,7 +823,7 @@ good_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="150" parent="20" name="#FAKE_tradingApp_buyercard_cbuyerGoods_1">
+    <foreign-key id="176" parent="22" name="#FAKE_tradingApp_buyercard_cbuyerGoods_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>good_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -712,27 +833,32 @@ good_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="151" parent="21" name="id">
+    <column id="177" parent="23" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="152" parent="21" name="goodId_id">
+    <column id="178" parent="23" name="goodId_id">
       <Position>2</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="153" parent="21" name="useId_id">
+    <column id="179" parent="23" name="useId_id">
       <Position>3</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="154" parent="21">
+    <column id="180" parent="23" name="gnumber">
+      <Position>4</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="181" parent="23">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="155" parent="21" name="#FAKE_tradingApp_cart_2">
+    <foreign-key id="182" parent="23" name="#FAKE_tradingApp_cart_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>goodId_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -742,7 +868,7 @@ good_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <foreign-key id="156" parent="21" name="#FAKE_tradingApp_cart_1">
+    <foreign-key id="183" parent="23" name="#FAKE_tradingApp_cart_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>useId_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -752,37 +878,37 @@ good_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="157" parent="22" name="id">
+    <column id="184" parent="24" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="158" parent="22" name="name">
+    <column id="185" parent="24" name="name">
       <Position>2</Position>
       <DataType>VARCHAR(20)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="159" parent="22" name="contemt">
+    <column id="186" parent="24" name="contemt">
       <Position>3</Position>
       <DataType>TEXT(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="160" parent="22" name="datetime">
+    <column id="187" parent="24" name="datetime">
       <Position>4</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="161" parent="22" name="guser_id">
+    <column id="188" parent="24" name="guser_id">
       <Position>5</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="162" parent="22">
+    <key id="189" parent="24">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="163" parent="22" name="#FAKE_tradingApp_comment_1">
+    <foreign-key id="190" parent="24" name="#FAKE_tradingApp_comment_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>guser_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -792,75 +918,276 @@ good_id</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="164" parent="23" name="id">
+    <column id="191" parent="25" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="165" parent="23" name="gname">
+    <column id="192" parent="25" name="gname">
       <Position>2</Position>
       <DataType>VARCHAR(20)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="166" parent="23" name="gprice">
+    <column id="193" parent="25" name="gprice">
       <Position>3</Position>
       <DataType>REAL(0,-1)|6</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="167" parent="23" name="gclassify">
+    <column id="194" parent="25" name="gclassify">
       <Position>4</Position>
       <DataType>VARCHAR(20)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="168" parent="23" name="gtime">
+    <column id="195" parent="25" name="gtime">
       <Position>5</Position>
       <DataType>DATETIME(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="169" parent="23" name="gpicture">
+    <column id="196" parent="25" name="gpicture">
       <Position>6</Position>
       <DataType>VARCHAR(100)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="170" parent="23">
+    <key id="197" parent="25">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="171" parent="24" name="id">
+    <column id="198" parent="26" name="id">
       <Position>1</Position>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="172" parent="24" name="uname">
+    <column id="199" parent="26" name="uname">
       <Position>2</Position>
       <DataType>VARCHAR(20)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="173" parent="24" name="upassword">
+    <column id="200" parent="26" name="upassword">
       <Position>3</Position>
       <DataType>VARCHAR(20)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="174" parent="24" name="uicon">
+    <column id="201" parent="26" name="uicon">
       <Position>4</Position>
       <DataType>VARCHAR(100)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="175" parent="24" name="uremainder">
+    <column id="202" parent="26" name="uremainder">
       <Position>5</Position>
       <DataType>REAL(0,-1)|6</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="176" parent="24" name="sqlite_autoindex_tradingApp_user_1">
+    <index id="203" parent="26" name="sqlite_autoindex_tradingApp_user_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uname</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="177" parent="24">
+    <key id="204" parent="26">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="205" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="206" parent="27" name="title">
+      <Position>2</Position>
+      <DataType>VARCHAR(128)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="207" parent="27" name="url_name">
+      <Position>3</Position>
+      <DataType>VARCHAR(64)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="208" parent="27" name="query">
+      <Position>4</Position>
+      <DataType>VARCHAR(1000)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="209" parent="27" name="is_share">
+      <Position>5</Position>
+      <DataType>BOOL(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="210" parent="27" name="content_type_id">
+      <Position>6</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="211" parent="27" name="user_id">
+      <Position>7</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <key id="212" parent="27">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="213" parent="27" name="#FAKE_xadmin_bookmark_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>content_type_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>django_content_type</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <foreign-key id="214" parent="27" name="#FAKE_xadmin_bookmark_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <column id="215" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="216" parent="28" name="action_time">
+      <Position>2</Position>
+      <DataType>DATETIME(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="217" parent="28" name="ip_addr">
+      <Position>3</Position>
+      <DataType>CHAR(39)(0,-1)|12</DataType>
+    </column>
+    <column id="218" parent="28" name="object_id">
+      <Position>4</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+    </column>
+    <column id="219" parent="28" name="object_repr">
+      <Position>5</Position>
+      <DataType>VARCHAR(200)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="220" parent="28" name="message">
+      <Position>6</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="221" parent="28" name="content_type_id">
+      <Position>7</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="222" parent="28" name="user_id">
+      <Position>8</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="223" parent="28" name="action_flag">
+      <Position>9</Position>
+      <DataType>VARCHAR(32)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="224" parent="28">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="225" parent="28" name="#FAKE_xadmin_log_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>content_type_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>django_content_type</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <foreign-key id="226" parent="28" name="#FAKE_xadmin_log_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <column id="227" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="228" parent="29" name="key">
+      <Position>2</Position>
+      <DataType>VARCHAR(256)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="229" parent="29" name="value">
+      <Position>3</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="230" parent="29" name="user_id">
+      <Position>4</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="231" parent="29">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="232" parent="29" name="#FAKE_xadmin_usersettings_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <column id="233" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="234" parent="30" name="page_id">
+      <Position>2</Position>
+      <DataType>VARCHAR(256)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="235" parent="30" name="widget_type">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="236" parent="30" name="value">
+      <Position>4</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="237" parent="30" name="user_id">
+      <Position>5</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="238" parent="30">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="239" parent="30" name="#FAKE_xadmin_userwidget_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
   </database-model>
 </dataSource>
